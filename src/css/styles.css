@@ -26,10 +26,7 @@ body {
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
+  bottom: 20px;
 }
 .loader::before {
   content: 'Loading images,please wait...';
@@ -41,8 +38,6 @@ body {
   box-sizing: border-box;
   animation: floating 1s ease-out infinite alternate;
   top: 100%;
-  left: 200%;
-  position: relative;
 }
 .loader::after {
   content: '';
@@ -50,8 +45,8 @@ body {
   height: 10px;
   background: rgba(0, 0, 0, 0.15);
   position: absolute;
-  left: 200%;
   top: 100%;
+  right: 5%;
   filter: blur(4px);
   border-radius: 50%;
   box-sizing: border-box;
@@ -83,7 +78,7 @@ body {
   width: 100%;
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 #form-input {
   width: 272px;
@@ -211,6 +206,7 @@ button:hover {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
+  width: 100%;
 }
 .load-more-loader {
   position: relative;
