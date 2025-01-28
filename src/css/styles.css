@@ -1,0 +1,262 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+body {
+  font-family: 'Montserrat', serif;
+  font-size: 16px;
+  color: #2e2f42;
+}
+.loader {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.loader::before {
+  content: 'Loading images,please wait...';
+  color: #4e75ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: floating 1s ease-out infinite alternate;
+  top: 100%;
+  left: 200%;
+  position: relative;
+}
+.loader::after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 200%;
+  top: 100%;
+  filter: blur(4px);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-out infinite alternate;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+#form-input {
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #808080;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+}
+#form-input::placeholder {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+#form-input:hover {
+  border: 1px solid #000000;
+}
+#form-input:focus {
+  border: 2px solid #4e75ff;
+}
+button {
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-left: 10px;
+}
+button:hover {
+  background-color: #6c8cff;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: max-content;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-link img {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-card {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  object-fit: fill;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  gap: 20px;
+  margin: auto;
+}
+.info p {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.info span {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#load-more {
+  width: 130px;
+  height: 40px;
+  padding: 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+#load-more:hover {
+  background-color: #6c8cff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.load-more-loader {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  bottom: 20px;
+}
+.load-more-loader::before {
+  content: 'Loading images,please wait...';
+  color: #4e75ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: floating 1s ease-out infinite alternate;
+  top: 100%;
+}
+.load-more-loader::after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  filter: blur(4px);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-out infinite alternate;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
